@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const colors = require("colors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-const errorHandler = require("./middlewares/errorMiddleware");
+const errorHandler = require("./middlewares/errorMiddleware.js");
 
 // routes path
 const authRoute = require("./routes/authRoute");
@@ -28,7 +28,7 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 8080;
 
 // api routes
-app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/auth/", authRoute);
 
 // listen
 app.listen(PORT, () => {

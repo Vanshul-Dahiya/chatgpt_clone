@@ -59,7 +59,7 @@ userSchema.methods.getSignedToken = function (res) {
   const refreshToken = JWT.sign(
     { id: this._id },
     process.env.JWT_REFRESH_TOKEN,
-    { expiresIn: process.env.JWT_REFRESH_EXPIREIM }
+    { expiresIn: process.env.JWT_REFRESH_EXPIREIN }
   );
 
   //   generate token with help of cookie
