@@ -134,14 +134,14 @@ const Homepage = () => {
                 JS CONVERTER
               </Typography>
               <Typography variant="h6">
-                Trasnlate english to javascript code
+                Translate english to javascript code
               </Typography>
             </Stack>
           </Card>
         </Box>
         <Box p={2}>
           <Typography variant="h4" mb={2} fontWeight="bold">
-            AI SCIFI Images
+            AI SCI-FI Images
           </Typography>
           <Card
             onClick={() => navigate("/scifi-image")}
