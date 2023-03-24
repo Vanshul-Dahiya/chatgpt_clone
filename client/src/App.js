@@ -10,6 +10,7 @@ import Homepage from "./pages/Homepage";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Summary from "./pages/Summary";
+import Paragraph from "./pages/Paragraph";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings(), []));
@@ -24,7 +25,8 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/summary" element={<Summary/>}/>
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/paragraph" element={<Paragraph />} />
         </Routes>
       </ThemeProvider>
     </>
