@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Summary from "./pages/Summary";
 import Paragraph from "./pages/Paragraph";
+import ChatBot from "./pages/ChatBot";
 
 function App() {
   const theme = useMemo(() => createTheme(themeSettings(), []));
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/summary" element={<Summary />} />
           <Route path="/paragraph" element={<Paragraph />} />
+          <Route path="/chatbot" element={<ChatBot />} />
         </Routes>
       </ThemeProvider>
     </>
