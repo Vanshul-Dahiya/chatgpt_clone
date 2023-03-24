@@ -98,3 +98,24 @@ exports.jsConvertorController = async (req, res) => {
     });
   }
 };
+exports.scifiImageController = async (req, res) => {
+  try {
+    const { text } = req.body;
+    const { data } = await openai.createImage({
+      prompt: `generate a scifi image of ${text}`,
+      n: 1,
+      size: "512x512",
+    });
+
+    if (data) {
+      if (data.data[0].url) {
+        return res.status(200).json(data.data[0].url);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(404).json({
+      message: err.message,
+    });
+  }
+};
